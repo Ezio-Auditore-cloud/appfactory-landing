@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stop Losing Leads While You Sleep | App Factory AI Automation</title>
+<meta name="description" content="AI that answers your customers 24/7, books appointments, and follows up automatically. Free 2-week trial for Texas businesses.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#fff;overflow-x:hidden;}
+a{text-decoration:none;}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:radial-gradient(ellipse at 50% 0%,#1a1a3e 0%,#0a0a0f 70%);}
+.hero-inner{max-width:720px;}
+.badge{display:inline-block;background:rgba(255,107,53,0.12);border:1px solid rgba(255,107,53,0.3);color:#FF6B35;font-size:13px;font-weight:600;padding:6px 16px;border-radius:20px;letter-spacing:1px;margin-bottom:25px;}
+.hero h1{font-size:52px;font-weight:800;line-height:1.15;margin-bottom:20px;letter-spacing:-1px;}
+.hero h1 .highlight{background:linear-gradient(135deg,#FF6B35,#FFD700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero p{font-size:20px;color:#aaa;line-height:1.6;margin-bottom:35px;}
+.hero-cta{display:inline-block;background:linear-gradient(135deg,#FF6B35,#e85d26);color:#fff;font-size:18px;font-weight:700;padding:18px 45px;border-radius:8px;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 25px rgba(255,107,53,0.3);}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 35px rgba(255,107,53,0.4);color:#fff;}
+.hero-sub{margin-top:15px;font-size:14px;color:#666;}
+
+/* Social Proof Bar */
+.proof{background:#0f0f18;border-top:1px solid #1a1a2e;border-bottom:1px solid #1a1a2e;padding:25px 20px;text-align:center;}
+.proof-inner{max-width:800px;margin:0 auto;display:flex;justify-content:center;gap:50px;flex-wrap:wrap;}
+.proof-item{text-align:center;}
+.proof-num{font-size:32px;font-weight:800;color:#FF6B35;}
+.proof-label{font-size:12px;color:#666;letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
+
+/* Pain Section */
+.pain{padding:80px 20px;max-width:800px;margin:0 auto;}
+.pain h2{font-size:36px;font-weight:700;text-align:center;margin-bottom:40px;line-height:1.3;}
+.pain h2 .highlight{color:#FF6B35;}
+.pain-grid{display:grid;gap:20px;}
+.pain-item{display:flex;gap:15px;padding:20px;background:rgba(255,255,255,0.02);border:1px solid #1a1a2e;border-radius:10px;}
+.pain-icon{font-size:28px;flex-shrink:0;width:45px;text-align:center;}
+.pain-text h3{font-size:17px;margin-bottom:5px;color:#fff;}
+.pain-text p{font-size:14px;color:#888;line-height:1.6;}
+
+/* Solution Section */
+.solution{padding:80px 20px;background:#0f0f18;}
+.solution-inner{max-width:800px;margin:0 auto;}
+.solution h2{font-size:36px;font-weight:700;text-align:center;margin-bottom:15px;}
+.solution h2 .highlight{color:#FF6B35;}
+.solution .sub{text-align:center;color:#888;font-size:16px;margin-bottom:45px;}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.feature{padding:25px;background:rgba(255,255,255,0.02);border:1px solid #1a1a2e;border-radius:10px;}
+.feature-icon{font-size:24px;margin-bottom:12px;}
+.feature h3{font-size:16px;margin-bottom:6px;}
+.feature p{font-size:13px;color:#888;line-height:1.6;}
+
+/* Demo Section */
+.demo{padding:80px 20px;text-align:center;}
+.demo-inner{max-width:700px;margin:0 auto;}
+.demo h2{font-size:36px;font-weight:700;margin-bottom:15px;}
+.demo h2 .highlight{color:#FF6B35;}
+.demo p{color:#888;font-size:16px;margin-bottom:30px;}
+.demo-frame{background:#1a1a2e;border:1px solid #2a2a4e;border-radius:12px;padding:40px;margin-bottom:30px;}
+.demo-frame a{display:inline-block;background:linear-gradient(135deg,#FF6B35,#e85d26);color:#fff;font-size:16px;font-weight:700;padding:14px 35px;border-radius:8px;}
+.demo-frame a:hover{color:#fff;}
+
+/* Form Section */
+.form-section{padding:80px 20px;background:#0f0f18;}
+.form-inner{max-width:550px;margin:0 auto;text-align:center;}
+.form-section h2{font-size:36px;font-weight:700;margin-bottom:10px;}
+.form-section h2 .highlight{color:#FF6B35;}
+.form-section .sub{color:#888;font-size:16px;margin-bottom:35px;}
+.form-box{background:rgba(255,255,255,0.02);border:1px solid #1a1a2e;border-radius:12px;padding:35px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.form-group{margin-bottom:12px;text-align:left;}
+.form-group label{display:block;font-size:12px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;background:#0a0a0f;border:1px solid #2a2a4e;border-radius:6px;color:#fff;font-size:14px;font-family:inherit;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:#FF6B35;}
+.form-group select{appearance:none;-webkit-appearance:none;}
+.form-group select option{background:#0a0a0f;}
+.submit-btn{width:100%;padding:16px;background:linear-gradient(135deg,#FF6B35,#e85d26);color:#fff;border:none;border-radius:8px;font-size:17px;font-weight:700;cursor:pointer;margin-top:8px;transition:transform 0.2s;}
+.submit-btn:hover{transform:translateY(-2px);}
+.form-note{font-size:12px;color:#555;margin-top:12px;}
+
+/* Testimonial */
+.testimonial{padding:60px 20px;text-align:center;max-width:650px;margin:0 auto;}
+.testimonial blockquote{font-size:18px;line-height:1.7;color:#ccc;font-style:italic;margin-bottom:15px;}
+.testimonial .author{color:#FF6B35;font-size:14px;font-weight:600;}
+
+/* CTA Bottom */
+.cta-bottom{padding:80px 20px;text-align:center;background:radial-gradient(ellipse at 50% 100%,#1a1a3e 0%,#0a0a0f 70%);}
+.cta-bottom h2{font-size:36px;font-weight:700;margin-bottom:15px;}
+.cta-bottom h2 .highlight{color:#FF6B35;}
+.cta-bottom p{color:#888;font-size:16px;margin-bottom:30px;}
+.cta-bottom a{display:inline-block;background:linear-gradient(135deg,#FF6B35,#e85d26);color:#fff;font-size:18px;font-weight:700;padding:18px 45px;border-radius:8px;box-shadow:0 4px 25px rgba(255,107,53,0.3);}
+.cta-bottom a:hover{color:#fff;}
+
+/* Footer */
+footer{padding:40px 20px;text-align:center;border-top:1px solid #1a1a2e;}
+footer p{font-size:12px;color:#444;}
+
+/* Mobile */
+@media(max-width:768px){
+.hero h1{font-size:34px;}
+.features{grid-template-columns:1fr;}
+.form-row{grid-template-columns:1fr;}
+.proof-inner{gap:30px;}
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+<div class="hero-inner">
+<div class="badge">FREE 2-WEEK TRIAL — NO CREDIT CARD</div>
+<h1>Stop Losing Leads <span class="highlight">While You Sleep</span></h1>
+<p>Your customers are calling at 9 PM, emailing on weekends, and messaging at 6 AM. If nobody answers, they call your competitor. Our AI answers instantly — 24/7, 365.</p>
+<a href="#quote" class="hero-cta">Get Your Free AI Demo</a>
+<p class="hero-sub">Takes 30 seconds. No commitment. See it working for YOUR business.</p>
+</div>
+</section>
+
+<!-- Social Proof -->
+<div class="proof">
+<div class="proof-inner">
+<div class="proof-item"><div class="proof-num">80%</div><div class="proof-label">Questions Handled by AI</div></div>
+<div class="proof-item"><div class="proof-num">24/7</div><div class="proof-label">Always On, Never Sick</div></div>
+<div class="proof-item"><div class="proof-num">15+</div><div class="proof-label">Hours Saved Per Week</div></div>
+<div class="proof-item"><div class="proof-num">$199</div><div class="proof-label">Starting Monthly</div></div>
+</div>
+</div>
+
+<!-- Pain Points -->
+<section class="pain">
+<h2>Sound <span class="highlight">Familiar?</span></h2>
+<div class="pain-grid">
+<div class="pain-item">
+<div class="pain-icon">📱</div>
+<div class="pain-text">
+<h3>Monday morning: 15 missed calls from the weekend</h3>
+<p>Half of them already booked with someone else. The leads are gone before you even open the office.</p>
+</div>
+</div>
+<div class="pain-item">
+<div class="pain-icon">💬</div>
+<div class="pain-text">
+<h3>"What are your hours?" for the 50th time today</h3>
+<p>Your front desk spends 3 hours a day answering the same questions instead of helping real customers.</p>
+</div>
+</div>
+<div class="pain-item">
+<div class="pain-icon">📧</div>
+<div class="pain-text">
+<h3>Inbox full of leads you didn't reply to fast enough</h3>
+<p>78% of customers buy from whoever responds first. If you take 4 hours, they've already moved on.</p>
+</div>
+</div>
+<div class="pain-item">
+<div class="pain-icon">🏃</div>
+<div class="pain-text">
+<h3>You're the business AND the receptionist AND the salesperson</h3>
+<p>You can't grow when you're stuck answering phones. Something has to give.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Solution -->
+<section class="solution">
+<div class="solution-inner">
+<h2>What If Your Business Could <span class="highlight">Answer Itself?</span></h2>
+<p class="sub">Our AI handles the routine so you handle the revenue.</p>
+<div class="features">
+<div class="feature">
+<div class="feature-icon">🤖</div>
+<h3>AI Customer Service — 24/7</h3>
+<p>Answers questions about hours, pricing, services, and availability instantly. Trained on YOUR specific business data.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">📅</div>
+<h3>Automated Booking</h3>
+<p>Customers book appointments directly through the AI. Syncs with your calendar. No phone tag.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">📧</div>
+<h3>Smart Follow-Ups</h3>
+<p>Leads who don't book get automatic follow-up emails. No one falls through the cracks.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">🔔</div>
+<h3>Human When It Matters</h3>
+<p>Complex questions get routed to you instantly via text alert. AI handles the 80%, you handle the 20% that closes deals.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Demo -->
+<section class="demo">
+<div class="demo-inner">
+<h2>See It <span class="highlight">In Action</span></h2>
+<p>This is a real AI chatbot handling customer questions for a local business. Try it yourself — ask anything.</p>
+<div class="demo-frame">
+<p style="color:#888;margin-bottom:20px;font-size:14px;">Live demo — ask about hours, pricing, appointments, or anything else</p>
+<a href="https://ezio-auditore-cloud.github.io/appfactory-demo/" target="_blank">Open Live Demo →</a>
+</div>
+</div>
+</section>
+
+<!-- Quote Form -->
+<section class="form-section" id="quote">
+<div class="form-inner">
+<h2>Get Your <span class="highlight">Free Trial</span></h2>
+<p class="sub">2 weeks free. No credit card. See if it works for your business.</p>
+<div class="form-box">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<div class="form-row">
+<div class="form-group">
+<label>Your Name</label>
+<input type="text" name="name" placeholder="Full name" required>
+</div>
+<div class="form-group">
+<label>Business Name</label>
+<input type="text" name="business" placeholder="Your business" required>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label>Email</label>
+<input type="email" name="email" placeholder="you@business.com" required>
+</div>
+<div class="form-group">
+<label>Phone</label>
+<input type="tel" name="phone" placeholder="(555) 123-4567">
+</div>
+</div>
+<div class="form-group">
+<label>Industry</label>
+<select name="industry" required>
+<option value="">Select your industry</option>
+<option value="dental">Dental Practice</option>
+<option value="medical">Medical / Healthcare</option>
+<option value="law">Law Firm</option>
+<option value="realestate">Real Estate</option>
+<option value="hvac">HVAC / Plumbing</option>
+<option value="auto">Auto Repair / Dealership</option>
+<option value="medspa">Med Spa / Salon</option>
+<option value="restaurant">Restaurant / Catering</option>
+<option value="fitness">Fitness / Gym</option>
+<option value="vet">Veterinary</option>
+<option value="events">Events / Entertainment</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="form-group">
+<label>What's your biggest challenge?</label>
+<select name="challenge">
+<option value="">Select one</option>
+<option value="missed_calls">Missing calls / leads after hours</option>
+<option value="repetitive">Answering the same questions all day</option>
+<option value="followup">Following up with leads</option>
+<option value="booking">Appointment scheduling</option>
+<option value="all">All of the above</option>
+</select>
+</div>
+<button type="submit" class="submit-btn">Start My Free Trial →</button>
+<p class="form-note">We'll set up a custom AI demo for your business within 24 hours. No credit card required.</p>
+</form>
+</div>
+</div>
+</section>
+
+<!-- Testimonial -->
+<section class="testimonial">
+<blockquote>"We were losing 10-15 leads per week because we couldn't answer calls fast enough. Now the AI handles everything after hours and our bookings are up 40%."</blockquote>
+<div class="author">— Local Austin Business Owner</div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="cta-bottom">
+<h2>Every Minute Without AI Is a <span class="highlight">Lead Lost</span></h2>
+<p>Your competitors are already automating. Don't get left behind.</p>
+<a href="#quote">Start Your Free Trial →</a>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>App Factory | Austin, TX 78701 | ezio@appfactoryaustin.com</p>
+<p style="margin-top:8px;">AI Automation for Texas Businesses</p>
+</footer>
+
+</body>
+</html>
