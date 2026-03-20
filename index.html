@@ -4,11 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stop Losing Leads While You Sleep | App Factory AI Automation</title>
-<meta name="description" content="AI that answers your customers 24/7, books appointments, and follows up automatically. Free 2-week trial for Texas businesses.">
+<meta name="description" content="AI that answers your customers 24/7, books appointments, and follows up automatically. Free 2-week trial for DFW businesses.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#fff;overflow-x:hidden;}
 a{text-decoration:none;}
+
+/* Nav */
+.nav{position:fixed;top:0;width:100%;padding:16px 30px;display:flex;justify-content:space-between;align-items:center;z-index:100;background:rgba(10,10,15,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.05);}
+.nav-logo{font-size:20px;font-weight:800;color:#fff;}
+.nav-logo span{color:#FF6B35;}
+.nav-links{display:flex;gap:25px;align-items:center;}
+.nav-links a{color:#aaa;font-size:14px;transition:color 0.2s;}
+.nav-links a:hover{color:#FF6B35;}
+.nav-cta{background:linear-gradient(135deg,#FF6B35,#e85d26);color:#fff!important;padding:10px 22px;border-radius:6px;font-weight:600;font-size:14px;}
 
 /* Hero */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:radial-gradient(ellipse at 50% 0%,#1a1a3e 0%,#0a0a0f 70%);}
@@ -50,6 +59,38 @@ a{text-decoration:none;}
 .feature h3{font-size:16px;margin-bottom:6px;}
 .feature p{font-size:13px;color:#888;line-height:1.6;}
 
+/* How It Works */
+.how{padding:80px 20px;max-width:800px;margin:0 auto;}
+.how h2{font-size:36px;font-weight:700;text-align:center;margin-bottom:45px;}
+.how h2 .highlight{color:#FF6B35;}
+.steps{display:grid;gap:30px;}
+.step{display:flex;gap:20px;align-items:flex-start;}
+.step-num{background:linear-gradient(135deg,#FF6B35,#e85d26);color:#fff;font-size:20px;font-weight:800;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.step-text h3{font-size:18px;margin-bottom:5px;}
+.step-text p{font-size:14px;color:#888;line-height:1.6;}
+
+/* Pricing */
+.pricing{padding:80px 20px;background:#0f0f18;}
+.pricing-inner{max-width:900px;margin:0 auto;}
+.pricing h2{font-size:36px;font-weight:700;text-align:center;margin-bottom:10px;}
+.pricing h2 .highlight{color:#FF6B35;}
+.pricing .sub{text-align:center;color:#888;font-size:16px;margin-bottom:45px;}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
+.price-card{background:rgba(255,255,255,0.02);border:1px solid #1a1a2e;border-radius:12px;padding:30px;text-align:center;position:relative;}
+.price-card.popular{border-color:#FF6B35;box-shadow:0 0 30px rgba(255,107,53,0.15);}
+.popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#FF6B35,#e85d26);color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:12px;letter-spacing:1px;}
+.price-card h3{font-size:20px;margin-bottom:8px;margin-top:10px;}
+.price-amount{font-size:42px;font-weight:800;margin:15px 0 5px;}
+.price-amount span{font-size:16px;color:#888;font-weight:400;}
+.price-period{font-size:13px;color:#666;margin-bottom:20px;}
+.price-features{list-style:none;text-align:left;margin-bottom:25px;}
+.price-features li{padding:8px 0;font-size:14px;color:#aaa;border-bottom:1px solid rgba(255,255,255,0.03);}
+.price-features li::before{content:"✓ ";color:#FF6B35;font-weight:700;}
+.price-btn{display:block;width:100%;padding:14px;border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;transition:transform 0.2s;text-align:center;}
+.price-btn-outline{background:transparent;border:1px solid #FF6B35;color:#FF6B35;}
+.price-btn-fill{background:linear-gradient(135deg,#FF6B35,#e85d26);color:#fff;}
+.price-btn:hover{transform:translateY(-2px);}
+
 /* Demo Section */
 .demo{padding:80px 20px;text-align:center;}
 .demo-inner{max-width:700px;margin:0 auto;}
@@ -78,10 +119,16 @@ a{text-decoration:none;}
 .submit-btn:hover{transform:translateY(-2px);}
 .form-note{font-size:12px;color:#555;margin-top:12px;}
 
-/* Testimonial */
-.testimonial{padding:60px 20px;text-align:center;max-width:650px;margin:0 auto;}
-.testimonial blockquote{font-size:18px;line-height:1.7;color:#ccc;font-style:italic;margin-bottom:15px;}
-.testimonial .author{color:#FF6B35;font-size:14px;font-weight:600;}
+/* FAQ */
+.faq{padding:80px 20px;max-width:700px;margin:0 auto;}
+.faq h2{font-size:36px;font-weight:700;text-align:center;margin-bottom:40px;}
+.faq h2 .highlight{color:#FF6B35;}
+.faq-item{border-bottom:1px solid #1a1a2e;padding:20px 0;}
+.faq-q{font-size:16px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.faq-q::after{content:"+";font-size:22px;color:#FF6B35;transition:transform 0.3s;}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{font-size:14px;color:#888;line-height:1.7;max-height:0;overflow:hidden;transition:max-height 0.3s,padding 0.3s;}
+.faq-item.open .faq-a{max-height:200px;padding-top:12px;}
 
 /* CTA Bottom */
 .cta-bottom{padding:80px 20px;text-align:center;background:radial-gradient(ellipse at 50% 100%,#1a1a3e 0%,#0a0a0f 70%);}
@@ -94,6 +141,7 @@ a{text-decoration:none;}
 /* Footer */
 footer{padding:40px 20px;text-align:center;border-top:1px solid #1a1a2e;}
 footer p{font-size:12px;color:#444;}
+footer a{color:#FF6B35;}
 
 /* Mobile */
 @media(max-width:768px){
@@ -101,10 +149,23 @@ footer p{font-size:12px;color:#444;}
 .features{grid-template-columns:1fr;}
 .form-row{grid-template-columns:1fr;}
 .proof-inner{gap:30px;}
+.pricing-grid{grid-template-columns:1fr;}
+.nav-links{display:none;}
 }
 </style>
 </head>
 <body>
+
+<!-- Nav -->
+<nav class="nav">
+<div class="nav-logo">App <span>Factory</span></div>
+<div class="nav-links">
+<a href="#how">How It Works</a>
+<a href="#pricing">Pricing</a>
+<a href="#demo">Demo</a>
+<a href="#quote" class="nav-cta">Start Free Trial</a>
+</div>
+</nav>
 
 <!-- Hero -->
 <section class="hero">
@@ -120,10 +181,10 @@ footer p{font-size:12px;color:#444;}
 <!-- Social Proof -->
 <div class="proof">
 <div class="proof-inner">
-<div class="proof-item"><div class="proof-num">80%</div><div class="proof-label">Questions Handled by AI</div></div>
+<div class="proof-item"><div class="proof-num">85%</div><div class="proof-label">Of Missed Calls Never Return</div></div>
 <div class="proof-item"><div class="proof-num">24/7</div><div class="proof-label">Always On, Never Sick</div></div>
-<div class="proof-item"><div class="proof-num">15+</div><div class="proof-label">Hours Saved Per Week</div></div>
-<div class="proof-item"><div class="proof-num">$199</div><div class="proof-label">Starting Monthly</div></div>
+<div class="proof-item"><div class="proof-num">2 min</div><div class="proof-label">Average Setup Time</div></div>
+<div class="proof-item"><div class="proof-num">$0</div><div class="proof-label">To Start Your Trial</div></div>
 </div>
 </div>
 
@@ -135,7 +196,7 @@ footer p{font-size:12px;color:#444;}
 <div class="pain-icon">📱</div>
 <div class="pain-text">
 <h3>Monday morning: 15 missed calls from the weekend</h3>
-<p>Half of them already booked with someone else. The leads are gone before you even open the office.</p>
+<p>Half already booked with someone else. The leads are gone before you even open the shop.</p>
 </div>
 </div>
 <div class="pain-item">
@@ -192,11 +253,92 @@ footer p{font-size:12px;color:#444;}
 </div>
 </section>
 
+<!-- How It Works -->
+<section class="how" id="how">
+<h2>How It <span class="highlight">Works</span></h2>
+<div class="steps">
+<div class="step">
+<div class="step-num">1</div>
+<div class="step-text">
+<h3>Tell Us About Your Business</h3>
+<p>Fill out a quick form. We'll learn your services, hours, pricing, and common customer questions.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<div class="step-text">
+<h3>We Build Your Custom AI</h3>
+<p>Within 24 hours, we set up an AI assistant trained specifically on your business. You review and approve it.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<div class="step-text">
+<h3>Go Live — Start Capturing Leads</h3>
+<p>Add it to your website, connect it to your phone line, or embed it anywhere. Every lead gets an instant response.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing" id="pricing">
+<div class="pricing-inner">
+<h2>Simple, <span class="highlight">Transparent</span> Pricing</h2>
+<p class="sub">No contracts. Cancel anytime. Start with a free trial.</p>
+<div class="pricing-grid">
+<div class="price-card">
+<h3>Starter</h3>
+<div class="price-amount">$99<span>/mo</span></div>
+<p class="price-period">Best for solopreneurs</p>
+<ul class="price-features">
+<li>AI chat assistant on your website</li>
+<li>Up to 500 conversations/month</li>
+<li>Business hours auto-responses</li>
+<li>Email lead notifications</li>
+<li>Basic analytics dashboard</li>
+</ul>
+<a href="#quote" class="price-btn price-btn-outline">Start Free Trial</a>
+</div>
+<div class="price-card popular">
+<div class="popular-badge">MOST POPULAR</div>
+<h3>Professional</h3>
+<div class="price-amount">$199<span>/mo</span></div>
+<p class="price-period">Best for growing businesses</p>
+<ul class="price-features">
+<li>Everything in Starter</li>
+<li>AI phone answering (24/7)</li>
+<li>Unlimited conversations</li>
+<li>Appointment booking integration</li>
+<li>Automated follow-up sequences</li>
+<li>SMS text notifications</li>
+<li>Priority support</li>
+</ul>
+<a href="#quote" class="price-btn price-btn-fill">Start Free Trial</a>
+</div>
+<div class="price-card">
+<h3>Enterprise</h3>
+<div class="price-amount">$399<span>/mo</span></div>
+<p class="price-period">Best for multi-location</p>
+<ul class="price-features">
+<li>Everything in Professional</li>
+<li>Multiple locations/numbers</li>
+<li>Custom AI training</li>
+<li>CRM integration</li>
+<li>Dedicated account manager</li>
+<li>White-label option</li>
+</ul>
+<a href="#quote" class="price-btn price-btn-outline">Contact Us</a>
+</div>
+</div>
+</div>
+</section>
+
 <!-- Demo -->
-<section class="demo">
+<section class="demo" id="demo">
 <div class="demo-inner">
 <h2>See It <span class="highlight">In Action</span></h2>
-<p>This is a real AI chatbot handling customer questions for a local business. Try it yourself — ask anything.</p>
+<p>This is a real AI assistant handling customer questions for a local home services business. Try it yourself.</p>
 <div class="demo-frame">
 <p style="color:#888;margin-bottom:20px;font-size:14px;">Live demo — ask about hours, pricing, appointments, or anything else</p>
 <a href="https://ezio-auditore-cloud.github.io/appfactory-demo/" target="_blank">Open Live Demo →</a>
@@ -211,6 +353,8 @@ footer p{font-size:12px;color:#444;}
 <p class="sub">2 weeks free. No credit card. See if it works for your business.</p>
 <div class="form-box">
 <form action="https://formspree.io/f/xeernren" method="POST">
+<input type="hidden" name="_subject" value="New App Factory Lead!">
+<input type="hidden" name="_next" value="https://ezio-auditore-cloud.github.io/appfactory-landing/thanks.html">
 <div class="form-row">
 <div class="form-group">
 <label>Your Name</label>
@@ -235,11 +379,12 @@ footer p{font-size:12px;color:#444;}
 <label>Industry</label>
 <select name="industry" required>
 <option value="">Select your industry</option>
+<option value="hvac">HVAC / Plumbing / Electrical</option>
+<option value="contractor">General Contractor</option>
 <option value="dental">Dental Practice</option>
 <option value="medical">Medical / Healthcare</option>
 <option value="law">Law Firm</option>
 <option value="realestate">Real Estate</option>
-<option value="hvac">HVAC / Plumbing</option>
 <option value="auto">Auto Repair / Dealership</option>
 <option value="medspa">Med Spa / Salon</option>
 <option value="restaurant">Restaurant / Catering</option>
@@ -267,11 +412,30 @@ footer p{font-size:12px;color:#444;}
 </div>
 </section>
 
-<!-- Testimonial -->
-<section class="testimonial">
-<blockquote>"We were losing 10-15 leads per week because we couldn't answer calls fast enough. Now the AI handles everything after hours and our bookings are up 40%."</blockquote>
-<div class="author">— Local Austin Business Owner</div>
-</section>
+<!-- FAQ -->
+<section class="faq" id="faq">
+<h2>Common <span class="highlight">Questions</span></h2>
+<div class="faq-item">
+<div class="faq-q">How long does setup take?</div>
+<div class="faq-a">Most businesses are up and running within 24 hours. We handle all the setup — you just answer a few questions about your business and approve the AI before it goes live.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Will the AI sound robotic?</div>
+<div class="faq-a">No. Our AI is trained to have natural conversations. It knows your business details, speaks in your tone, and handles questions the way you would — just faster and 24/7.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">What if the AI can't answer a question?</div>
+<div class="faq-a">It routes the conversation to you immediately via text or email. You stay in control of complex situations while the AI handles the routine 80%.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Do I need to be technical?</div>
+<div class="faq-a">Not at all. We handle everything. If you can fill out a form and check your email, you can use App Factory.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Can I cancel anytime?</div>
+<div class="faq-a">Yes. No contracts, no cancellation fees. If it's not working for you, cancel with one click. We think you'll stay though — our customers typically see ROI within the first week.</div>
+</div>
+</div>
 
 <!-- Bottom CTA -->
 <section class="cta-bottom">
@@ -282,9 +446,19 @@ footer p{font-size:12px;color:#444;}
 
 <!-- Footer -->
 <footer>
-<p>App Factory | Austin, TX 78701 | ezio@appfactoryaustin.com</p>
+<p>App Factory | Dallas-Fort Worth, TX | <a href="mailto:ezio@appfactoryaustin.com">ezio@appfactoryaustin.com</a></p>
+<p style="margin-top:8px;"><a href="#" style="color:#666;">Privacy Policy</a> · <a href="#" style="color:#666;">Terms of Service</a></p>
 <p style="margin-top:8px;">AI Automation for Texas Businesses</p>
 </footer>
+
+<!-- FAQ Toggle Script -->
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{
+q.addEventListener('click',()=>{
+q.parentElement.classList.toggle('open');
+});
+});
+</script>
 
 </body>
 </html>
